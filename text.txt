@@ -1,0 +1,18 @@
+Indexing
+minimal amount of indexes. new tables are created every time.
+CREATE INDEX indexName ON tableName(column1,column2 , ...);
+sorted tables.
+
+
+
+Instead of writing long and complicated SELECT statements for searches that you perform often,you can create a VIEW.
+CREATE VIEW city_country ASSELECT city.name AS city_name,country.name AS country_name FROM city, country WHERE city.CountryCode = country.Code;
+can be used for security purposes.
+the query is saved in the variable. the whole database is not saved again, unlike in indexing.
+SELECT * FROM city_country;
+
+Normalization.
+I Swear To Tell The Truth, The Whole Truth and Nothing But The Truth.
+1NF - every column and now intersection must only contain exactly one value
+2NF - 1NF + all non-key attributes must be fully functional dependent on the primary key
+3NF - 1NF + 2NF + no non-key attributes can be functionally dependent upon another non-key attribute
